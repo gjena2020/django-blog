@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<a class="btn btn-primary" href="{% url 'blog:create' %}">Create Blog</a>
+<h1>Blogs</h1>
+    <div class="row">
+        {% for blog in object_list %}
+            <h3 class="col">
+                <a href="{% url 'blog:detail' blog.id %}">{{blog}}</a>
+            </h3>
+        {% endfor %}
+    </div>
+{% endblock body %}

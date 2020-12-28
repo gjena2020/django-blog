@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<a class="btn btn-primary" href="{% url 'blog:update' blog.id  %}">Update Blog</a>
+<a class="btn btn-danger" href="{% url 'blog:delete' blog.id  %}">Delete Blog</a>
+
+<h1>{{object.title}}</h1>
+    <p>{{object.content}}</p>
+{% endblock body %}
