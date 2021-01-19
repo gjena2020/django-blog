@@ -10,5 +10,7 @@ class Blog(models.Model):
 
     def get_absolute_url(self, *args, **kwargs):
         return '/blog/detail/{}'.format(self.id)
+    
+    
     def __str__(self):
         return self.title
